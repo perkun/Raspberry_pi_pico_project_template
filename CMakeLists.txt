@@ -32,7 +32,7 @@ target_link_libraries(${PROJECT_NAME} pico_stdlib)
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})
 
-if(EXISTS "${CMAKE_BINARY_DIR}/compile_commands.json")
+if(EXISTS "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json")
   file(
     COPY_FILE
     ${CMAKE_BINARY_DIR}/compile_commands.json
